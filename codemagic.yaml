@@ -1,0 +1,12 @@
+workflows:
+ my-workflow:
+  environment:
+    node: latest
+    npm: latest
+    groups:
+      - sauce_credentials
+  scripts:
+      - name: Run npm install
+        script: npm install
+        
+  
