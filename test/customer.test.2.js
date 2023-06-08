@@ -1,4 +1,4 @@
-describe('Testing Sauce Labs CCY with WDIO', () => {
+describe('Testing The Internet', () => {
   
   it('should click through lots of things', async () => {
     await browser.setTimeout({ 'script': 60000 });
