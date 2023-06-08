@@ -8,6 +8,7 @@ workflows:
   scripts:
       - name: Run npm install
         script: npm install
-      - name: cd wdio-example && npx wdio ./wdio.conf.js
+      - name: Run WDIO test script
+        script: cd wdio-example && npx wdio ./wdio.conf.js
         
   
