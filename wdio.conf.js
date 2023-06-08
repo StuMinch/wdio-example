@@ -8,7 +8,20 @@ exports.config = {
       browserName: 'chrome',
       platform: 'Windows 10',
       version: 'latest',
-    }],
+    },
+    {
+      browserName: 'chrome',
+      platformName: 'Android',
+      'appium:deviceName': 'Google Pixel 3 GoogleAPI Emulator',
+      'appium:platformVersion': '10.0',
+      'appium:automationName': 'UIAutomator2',
+      'sauce:options': {
+        build: 'WDIO & CodeMagic',
+        name: 'Android Test',
+        appiumVersion: '1.22.3'
+      },
+    },
+    ],
     specs: [
       './test/**/*.js'
     ]
