@@ -6,9 +6,9 @@ exports.config = {
   capabilities: [{
     browserName: 'MicrosoftEdge',
     platformName: 'Windows 11',
-    browserVersion: 'latest',
+    browserVersion: '85.0.564.51',
     'sauce:options': {
-      build: 'Windows 11 Testing - 85 vs Latest',
+      build: 'Windows 11 Testing - 85.0.564.51',
     },
   }],
   specs: [
