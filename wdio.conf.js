@@ -4,9 +4,9 @@ exports.config = {
   services: ['sauce'],
   maxInstances: 100,
   capabilities: [{
-    browserName: 'edge',
-    platform: 'Windows 11',
-    version: 'latest',
+    browserName: 'MicrosoftEdge',
+    platformName: 'Windows 11',
+    browserVersion: 'latest',
     'sauce:options': {
       build: 'Windows 11 Testing - 85 vs Latest',
     },
