@@ -82,14 +82,39 @@ describe('Guest Checkout Screen', () => {
       const checkoutNowBtn = await $("//android.widget.Button[@text='Checkout Now']");
       await checkoutNowBtn.waitForDisplayed({ timeout: 10000 });
       await checkoutNowBtn.click();
+      await driver.pause(10000);
     });
 
     it('should tap checkout as guest', async () => {
-      const checkoutAsGuestBtn = await $("//android.widget.Button[@text='Checkout as Guest']");
+      const checkoutAsGuestBtn = await $("//android.widget.TextView[@text='Checkout as Guest']");
       await checkoutAsGuestBtn.waitForDisplayed({ timeout: 10000 });
       await checkoutAsGuestBtn.click();
+      await driver.pause(10000);
+    });
+
+    it('should switch context and get page source', async () => {
+      let currentContexts = await driver.getContexts();
+      console.log(currentContexts);
+      await driver.pause(10000);
+      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
+    });
+
+    it('should enter email address', async () => {
+      //const emailAddr = await $("//*[@text='Email (for receipt)']/../../android.view.View//android.widget.EditText");
+      //const emailAddr = await $("//*[@formcontrolname='contactEmail']");
+      const emailAddr = await $('//input[@name="contactEmail"]');
+      
+      await emailAddr.waitForDisplayed({ timeout: 10000 });
+      await emailAddr.click();
+      await emailAddr.setValue('stumin@saucelabs.com');
     });
 /*
+    it('should tap continue button', async () => {
+      const continueBtn = await $("//android.widget.Button[@text='Continue']");
+      await continueBtn.waitForDisplayed({ timeout: 10000 });
+      await continueBtn.click();
+    });
+
     it('should enter zip code', async () => {
       const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
       const enterZipCode = $(`android=${locateZipCode}`);
