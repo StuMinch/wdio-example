@@ -101,9 +101,8 @@ describe('Guest Checkout Screen', () => {
 
     it('should enter email address', async () => {
       //const emailAddr = await $("//*[@text='Email (for receipt)']/../../android.view.View//android.widget.EditText");
-      //const emailAddr = await $("//*[@formcontrolname='contactEmail']");
-      const emailAddr = await $('//input[@name="contactEmail"]');
-      
+      const emailAddr = await $("//*[formcontrolname='contactEmail']");
+      //const emailAddr = await $("/html/body/app-root/checkout-landing-page/hdca-purchase-checkout-container/div/div/div[1]/hdca-purchase-user-info-flow-container/div/hdca-purchase-guest-container/hdca-purchase-guest-email-form/hdca-purchase-form-card/acl-card/section/form/div/acl-input-container/div[2]/div/input");
       await emailAddr.waitForDisplayed({ timeout: 10000 });
       await emailAddr.click();
       await emailAddr.setValue('stumin@saucelabs.com');
