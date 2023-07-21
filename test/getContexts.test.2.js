@@ -79,6 +79,7 @@ describe('Guest Checkout Screen', () => {
     });
 
     it('should tap checkout now', async () => {
+      //const checkoutNowBtn = $("//*[@id='btnCheckoutNow']");
       const checkoutNowBtn = await $("//android.widget.Button[@text='Checkout Now']");
       await checkoutNowBtn.waitForDisplayed({ timeout: 10000 });
       await checkoutNowBtn.click();
@@ -102,6 +103,12 @@ describe('Guest Checkout Screen', () => {
       const addToCart = $(`android=${locateAddToCart}`);
       await addToCart.waitForDisplayed({ timeout: 10000 });
       await addToCart.click();
+    });
+
+    it('should tap checkout now', async () => {
+      const checkoutNowBtn = $("//*[@id='btnCheckoutNow']");
+      await checkoutNowBtn.waitForDisplayed({ timeout: 5000 });
+      await checkoutNowBtn.click();
     });
 
 */
