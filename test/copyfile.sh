@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Set the source file name
-src_file="customer.test"
+src_file="guestCheckout.test"
 
-# Loop 100 times and copy the file, appending a unique number to the file name
-for i in {1..500}; do
+# Loop and copy the file, appending a unique number to the file name
+for i in {1..5}; do
   cp "$src_file" "${src_file}.${i}.js"
 done

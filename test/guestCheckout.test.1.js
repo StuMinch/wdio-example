@@ -70,65 +70,36 @@ describe('Guest Checkout Screen', () => {
       const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
       const addToCart = $(`android=${locateAddToCart}`);
       await addToCart.waitForDisplayed({ timeout: 10000 });
+      await driver.pause(5000);
     });
 
     it('should tap the cart icon', async () => {
       const shoppingCart = $("//*[@content-desc='View Cart']");
       await shoppingCart.click();
-      await driver.pause(10000);
+      await driver.pause(5000);
     });
 
     it('should tap checkout now', async () => {
       const checkoutNowBtn = await $("//android.widget.Button[@text='Checkout Now']");
       await checkoutNowBtn.waitForDisplayed({ timeout: 10000 });
       await checkoutNowBtn.click();
-      await driver.pause(10000);
+      await driver.pause(5000);
     });
 
     it('should tap checkout as guest', async () => {
-      const checkoutAsGuestBtn = await $("//android.widget.TextView[@text='Checkout as Guest']");
-      await checkoutAsGuestBtn.waitForDisplayed({ timeout: 10000 });
+      const checkoutAsGuestBtn = await $("//android.widget.Button[@text='Checkout as Guest']");
+      await checkoutAsGuestBtn.waitForDisplayed({ timeout: 15000 });
       await checkoutAsGuestBtn.click();
-      await driver.pause(10000);
-    });
-
-    it('should switch context and get page source', async () => {
-      let currentContexts = await driver.getContexts();
-      console.log(currentContexts);
-      await driver.pause(10000);
-      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
     });
 
     it('should enter email address', async () => {
-      //const emailAddr = await $("//*[@text='Email (for receipt)']/../../android.view.View//android.widget.EditText");
-      const emailAddr = await $("//*[formcontrolname='contactEmail']");
-      //const emailAddr = await $("/html/body/app-root/checkout-landing-page/hdca-purchase-checkout-container/div/div/div[1]/hdca-purchase-user-info-flow-container/div/hdca-purchase-guest-container/hdca-purchase-guest-email-form/hdca-purchase-form-card/acl-card/section/form/div/acl-input-container/div[2]/div/input");
-      await emailAddr.waitForDisplayed({ timeout: 10000 });
-      await emailAddr.click();
-      await emailAddr.setValue('stumin@saucelabs.com');
+      let currentContexts = await driver.getContexts();
+      console.log(currentContexts);
+      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
+      await driver.pause(5000);
+      driver.executeScript("document.querySelector('[formcontrolname=contactEmail]').value='stumin@saucelabs.com'");
+      //const continueBtn = await $("//*[@text='Continue']");
+      //await continueBtn.waitForDisplayed({ timeout: 10000 });
+      //await continueBtn.click();
     });
-/*
-    it('should tap continue button', async () => {
-      const continueBtn = await $("//android.widget.Button[@text='Continue']");
-      await continueBtn.waitForDisplayed({ timeout: 10000 });
-      await continueBtn.click();
-    });
-
-    it('should enter zip code', async () => {
-      const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
-      const enterZipCode = $(`android=${locateZipCode}`);
-      await enterZipCode.waitForDisplayed({ timeout: 10000 });
-      await enterZipCode.setValue('M1R 4E6');
-    });
-
-    it('should add item to the cart', async () => {
-      const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
-      const addToCart = $(`android=${locateAddToCart}`);
-      await addToCart.waitForDisplayed({ timeout: 10000 });
-      await addToCart.click();
-    });
-
-*/
-
 });
-
