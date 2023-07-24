@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 describe('Guest Checkout Screen', () => {
   
   it('should select the environment', async () => {
@@ -91,14 +93,44 @@ describe('Guest Checkout Screen', () => {
       await checkoutAsGuestBtn.waitForDisplayed({ timeout: 15000 });
       await checkoutAsGuestBtn.click();
     });
+/*
+    it('should run async function to set email address', async () => {
+      async function setEmailAddress(driver, emailAddress) {
+        await driver.executeAsync((email, done) => {
+          // Execute the asynchronous JavaScript code here
+          const element = document.querySelector('[formcontrolname=contactEmail]');
+          if (element) {
+            element.value = email;
+            done(); // Call the "done" callback to signal the completion of the asynchronous task
+          } else {
+            done(new Error("Element not found")); // Handle any error that might occur
+          }
+        }, emailAddress); // Pass the email address as an argument to the asynchronous function
+      }
+  
+        try {
+          await driver.switchContext('WEBVIEW_com.thehomedepotqa');
+          const emailAddress = 'stumin@saucelabs.com';
+          await setEmailAddress(driver, emailAddress); // Call the async function to set the email address
+          await driver.pause(10000);
+        } catch (error) {
+          console.error('Error occurred:', error);
+        } 
+     });
+});
+*/  
 
     it('should enter email address', async () => {
       let currentContexts = await driver.getContexts();
       console.log(currentContexts);
       await driver.switchContext('WEBVIEW_com.thehomedepotqa');
       await driver.pause(5000);
-      driver.executeScript("document.querySelector('[formcontrolname=contactEmail]').value='stumin@saucelabs.com'");
-      //const continueBtn = await $("//*[@text='Continue']");
+      //driver.execute("document.querySelector('[formcontrolname=contactEmail]').value='stumin@saucelabs.com'");
+      await driver.execute(() =>{
+        document.querySelector("[formcontrolname=contactEmail]").value="stumin@saucelabs.com"
+      })
+      await driver.pause(5000);
+      //const continueBtn = $("//*[@text='Continue']");
       //await continueBtn.waitForDisplayed({ timeout: 10000 });
       //await continueBtn.click();
     });
