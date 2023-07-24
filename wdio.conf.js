@@ -20,7 +20,7 @@ exports.config = {
     'appium:app': 'storage:filename=home-depot-app.apk',
     'appium:automationName': 'UIAutomator2',
     'sauce:options': {
-      build: '2023-07-21 - Home Depot Guest Checkout test',
+      build: '2023-07-24 - Home Depot Guest Checkout test',
       appiumVersion: '2.0.0'
     },
   },

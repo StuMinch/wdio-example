@@ -95,8 +95,10 @@ describe('Guest Checkout Screen', () => {
     });
 
     it('should run async function to set email address', async () => {
+      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
+      await driver.pause(3000);
       async function setEmailAddress(driver, emailAddress) {
-        await driver.executeAsync((email, done) => {
+        await driver.execute((email, done) => {
           const element = document.querySelector('[formcontrolname=contactEmail]');
           if (element) {
             element.value = email;
@@ -108,10 +110,9 @@ describe('Guest Checkout Screen', () => {
       }
   
         try {
-          await driver.switchContext('WEBVIEW_com.thehomedepotqa');
           const emailAddress = 'stumin@saucelabs.com';
-          await setEmailAddress(driver, emailAddress); // Call the async function to set the email address
-          await driver.pause(10000);
+          await setEmailAddress(driver, emailAddress);
+          
         } catch (error) {
           console.error('Error occurred:', error);
         } 
@@ -134,4 +135,3 @@ describe('Guest Checkout Screen', () => {
       //await continueBtn.click();
     });
 */ 
-});
