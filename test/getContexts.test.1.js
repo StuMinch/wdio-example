@@ -52,86 +52,71 @@ describe('Guest Checkout Screen', () => {
     await driver.execute('mobile: performEditorAction', {'action': 'search'});
     driver.execute('mobile: performEditorAction', {'action': 'search'});
     driver.execute('mobile: performEditorAction', {'action': 'done'});
-    });
+  });
 
-    it('should search and add item to cart', async () => {
-      const searchResult = await $("//android.widget.TextView[@text='Whirlpool']");
-      await searchResult.waitForDisplayed({ timeout: 10000 });
-      await searchResult.click();
-      const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
-      const enterZipCode = $(`android=${locateZipCode}`);
-      await enterZipCode.waitForDisplayed({ timeout: 10000 });
-      await enterZipCode.setValue('M1R 4E6');
-      const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
-      const addToCart = $(`android=${locateAddToCart}`);
-      await addToCart.waitForDisplayed({ timeout: 10000 });
-      await addToCart.click();
-    });
+  it('should search and add item to cart', async () => {
+    const searchResult = await $("//android.widget.TextView[@text='Whirlpool']");
+    await searchResult.waitForDisplayed({ timeout: 10000 });
+    await searchResult.click();
+    const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
+    const enterZipCode = $(`android=${locateZipCode}`);
+    await enterZipCode.waitForDisplayed({ timeout: 10000 });
+    await enterZipCode.setValue('M1R 4E6');
+    const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
+    const addToCart = $(`android=${locateAddToCart}`);
+    await addToCart.waitForDisplayed({ timeout: 10000 });
+    await addToCart.click();
+  });
 
-    it('should wait for item to be added to the cart', async () => {
-      const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
-      const addToCart = $(`android=${locateAddToCart}`);
-      await addToCart.waitForDisplayed({ timeout: 10000 });
-      await driver.pause(5000);
-    });
+  it('should wait for item to be added to the cart', async () => {
+    const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
+    const addToCart = $(`android=${locateAddToCart}`);
+    await addToCart.waitForDisplayed({ timeout: 10000 });
+    await driver.pause(5000);
+  });
 
-    it('should tap the cart icon', async () => {
-      const shoppingCart = $("//*[@content-desc='View Cart']");
-      await shoppingCart.click();
-      await driver.pause(5000);
-    });
+  it('should tap the cart icon', async () => {
+    const shoppingCart = $("//*[@content-desc='View Cart']");
+    await shoppingCart.click();
+    await driver.pause(5000);
+  });
 
-    it('should tap checkout now', async () => {
-      const checkoutNowBtn = await $("//android.widget.Button[@text='Checkout Now']");
-      await checkoutNowBtn.waitForDisplayed({ timeout: 10000 });
-      await checkoutNowBtn.click();
-      await driver.pause(5000);
-    });
+  it('should tap checkout now', async () => {
+    const checkoutNowBtn = await $("//android.widget.Button[@text='Checkout Now']");
+    await checkoutNowBtn.waitForDisplayed({ timeout: 10000 });
+    await checkoutNowBtn.click();
+    await driver.pause(5000);
+  });
 
-    it('should tap checkout as guest', async () => {
-      const checkoutAsGuestBtn = await $("//android.widget.Button[@text='Checkout as Guest']");
-      await checkoutAsGuestBtn.waitForDisplayed({ timeout: 15000 });
-      await checkoutAsGuestBtn.click();
-    });
+  it('should tap checkout as guest', async () => {
+    const checkoutAsGuestBtn = await $("//android.widget.Button[@text='Checkout as Guest']");
+    await checkoutAsGuestBtn.waitForDisplayed({ timeout: 15000 });
+    await checkoutAsGuestBtn.click();
+  });
 
-    it('should run async function to set email address', async () => {
-      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
-      await driver.pause(3000);
-      async function setEmailAddress(driver, emailAddress) {
-        await driver.execute((email, done) => {
-          const element = document.querySelector('[formcontrolname=contactEmail]');
-          if (element) {
-            element.value = email;
-            done();
-          } else {
-            done(new Error("Element not found"));
-          }
-        }, emailAddress); 
+  it('should set email address version 2', async () => {
+    await driver.switchContext('WEBVIEW_com.thehomedepotqa');
+    const email = "stumin@saucelabs.com"; 
+  
+    const result = await browser.execute((email) => {
+      const element = document.querySelector("[formcontrolname=contactEmail]");
+      if (element) {
+        element.value = email;
+        return true; 
       }
+      return false; 
+    }, email);
   
-        try {
-          const emailAddress = 'stumin@saucelabs.com';
-          await setEmailAddress(driver, emailAddress);
-          
-        } catch (error) {
-          console.error('Error occurred:', error);
-        } 
-     });
+    console.log(result); 
+  });
+
+  it('should inject javascript on the page', async () => {
+    const result = await browser.execute((a, b, c, d) => {
+        // browser context - you may not access client or console
+        return a + b + c + d
+    }, 1, 2, 3, 4)
+    // node.js context - client and console are available
+    console.log(result) // outputs: 10
+  });
 });
-  
-/*
-    it('should enter email address', async () => {
-      let currentContexts = await driver.getContexts();
-      console.log(currentContexts);
-      await driver.switchContext('WEBVIEW_com.thehomedepotqa');
-      await driver.pause(5000);
-      //driver.execute("document.querySelector('[formcontrolname=contactEmail]').value='stumin@saucelabs.com'");
-      await driver.execute(() =>{
-        document.querySelector("[formcontrolname=contactEmail]").value="stumin@saucelabs.com"
-      })
-      await driver.pause(5000);
-      //const continueBtn = $("//*[@text='Continue']");
-      //await continueBtn.waitForDisplayed({ timeout: 10000 });
-      //await continueBtn.click();
-    });
-*/ 
+ 
