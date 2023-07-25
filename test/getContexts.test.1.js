@@ -96,11 +96,7 @@ describe('Guest Checkout Screen', () => {
 
   it('should set email address', async () => {
     await driver.switchContext('WEBVIEW_com.thehomedepotqa');
-
-    const handle = await browser.getWindowHandle();
-    console.log(handle)
     await browser.switchWindow('Checkout | The Home Depot Canada');
-      
     const email = "stumin@saucelabs.com"; // Email address to set
     const result = await browser.execute((email) => {
       const element = document.querySelector("[formcontrolname=contactEmail]");
@@ -110,7 +106,6 @@ describe('Guest Checkout Screen', () => {
       }
       return false; // Return false if the element is not found
     }, email);
-
     console.log(result);     
   });
 });
