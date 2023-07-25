@@ -96,8 +96,6 @@ describe('Guest Checkout Screen', () => {
 
   it('should set email address version 2', async () => {
     await driver.switchContext('WEBVIEW_com.thehomedepotqa');
-    const windowsHandles = browser.windowHandles();
-    console.log(windowsHandles)
     const email = "stumin@saucelabs.com"; // Email address to set
   
     const result = await browser.execute((email) => {
