@@ -14,6 +14,7 @@ exports.config = {
     //browserName: 'chrome',
     platformName: 'Android',
     //'appium:deviceName': 'Google_Pixel_5_sltech_us',
+    //autoWebview: true,
     'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
     'appium:platformVersion': '12.0',
     'appium:deviceOrientation': 'portrait',
