@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 describe('Guest Checkout Screen', () => {
   
   it('should select the environment', async () => {
