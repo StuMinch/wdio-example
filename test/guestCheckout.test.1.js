@@ -56,7 +56,8 @@ describe('Guest Checkout Screen', () => {
     const searchResult = await $("//android.widget.TextView[@text='Whirlpool']");
     await searchResult.waitForDisplayed({ timeout: 10000 });
     await searchResult.click();
-    const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
+    //const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
+    const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).setDirection(UiSelector.VERTICAL).scrollIntoView(new UiSelector().text("A1A 1A1"));`
     const enterZipCode = $(`android=${locateZipCode}`);
     await enterZipCode.waitForDisplayed({ timeout: 10000 });
     await enterZipCode.setValue('M1R 4E6');
