@@ -13,16 +13,16 @@ exports.config = {
   capabilities: [{
     //browserName: 'chrome',
     platformName: 'Android',
-    'appium:deviceName': 'Google_Pixel_5_sltech_us1',
+    //'appium:deviceName': 'Google_Pixel_5_sltech_us1',
     //autoWebview: true,
-    //'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
+    'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
     'appium:platformVersion': '12.0',
     'appium:deviceOrientation': 'portrait',
     'appium:app': 'storage:filename=home-depot-app.apk',
     'appium:automationName': 'UIAutomator2',
     'sauce:options': {
-      build: '2023-07-25 - Network Capture for Alkami'
-      //appiumVersion: '2.0.0'
+      build: '2023-07-31 - Testing setDirection(UiSelector.VERTICAL)',
+      appiumVersion: '2.0.0'
     },
   },
   ],
