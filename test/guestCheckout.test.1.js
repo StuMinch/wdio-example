@@ -48,20 +48,20 @@ describe('Guest Checkout Screen', () => {
     await searchField.click();
     await searchField.setValue('1001567222');
     await driver.execute('mobile: performEditorAction', {'action': 'search'});
-    driver.execute('mobile: performEditorAction', {'action': 'search'});
-    driver.execute('mobile: performEditorAction', {'action': 'done'});
+    //driver.execute('mobile: performEditorAction', {'action': 'search'});
+    //driver.execute('mobile: performEditorAction', {'action': 'done'});
   });
 
   it('should search and add item to cart', async () => {
     const searchResult = await $("//android.widget.TextView[@text='Whirlpool']");
     await searchResult.waitForDisplayed({ timeout: 10000 });
     await searchResult.click();
-    //const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
-    const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).setDirection(UiSelector.VERTICAL).scrollIntoView(new UiSelector().text("A1A 1A1"));`
+    const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("A1A 1A1"))`;
+    //const locateZipCode = `new UiScrollable(new UiSelector().scrollable(true)).setDirection(UiSelector.VERTICAL).scrollIntoView(new UiSelector().text("A1A 1A1"));`
     const enterZipCode = $(`android=${locateZipCode}`);
     await enterZipCode.waitForDisplayed({ timeout: 10000 });
     await enterZipCode.setValue('M1R 4E6');
-    const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).setDirection(UiSelector.VERTICAL).scrollIntoView(new UiSelector().text("Add to Cart"))`;
+    const locateAddToCart = `new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("Add to Cart"))`;
     const addToCart = $(`android=${locateAddToCart}`);
     await addToCart.waitForDisplayed({ timeout: 10000 });
     await addToCart.click();

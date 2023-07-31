@@ -18,10 +18,10 @@ exports.config = {
     'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
     'appium:platformVersion': '12.0',
     'appium:deviceOrientation': 'portrait',
-    'appium:app': 'storage:filename=home-depot-app.apk',
+    'appium:app': 'storage:filename=home-depot-new-homescreen-app.apk',
     'appium:automationName': 'UIAutomator2',
     'sauce:options': {
-      build: '2023-07-31 - Testing setDirection(UiSelector.VERTICAL)',
+      build: '2023-07-31 - New Home Screen App)',
       appiumVersion: '2.0.0'
     },
   },
