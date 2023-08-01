@@ -1,4 +1,5 @@
 exports.config = {
+  deprecationWarnings: false,
   framework: 'mocha',
     mochaOpts: {
         timeout: 40000
