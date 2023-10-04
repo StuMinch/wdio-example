@@ -12,17 +12,14 @@ exports.config = {
   maxInstances: 50,
   maxInstancesPerCapability: 50,
   capabilities: [{
-    //browserName: 'chrome',
     platformName: 'Android',
-    //'appium:deviceName': 'Google_Pixel_5_sltech_us1',
-    //autoWebview: true,
     'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
     'appium:platformVersion': '12.0',
     'appium:deviceOrientation': 'portrait',
-    'appium:app': 'storage:filename=home-depot-new-homescreen-app.apk',
+    'appium:app': 'storage:filename=home-depot-app.apk',
     'appium:automationName': 'UIAutomator2',
     'sauce:options': {
-      build: '2023-07-31 - New Home Screen App)',
+      build: '2023-09-26 - Android WebViews',
       appiumVersion: '2.0.0'
     },
   },

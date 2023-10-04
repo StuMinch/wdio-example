@@ -1,0 +1,145 @@
+{"level":"debug","time":"2023-09-27T15:39:12.133-0700","caller":"cmd/bin.go:103","msg":"Upstream version: {Name: Min:0.2.113 Max:0.2.113} "}
+{"level":"debug","time":"2023-09-27T15:39:13.219-0700","caller":"core/lifecycle.go:101","msg":"Setting environment"}
+{"level":"debug","time":"2023-09-27T15:39:13.221-0700","caller":"core/lifecycle.go:104","msg":"Parsing config"}
+{"level":"debug","time":"2023-09-27T15:39:13.221-0700","caller":"yamlconfigmanager/setup.go:404","msg":"Custom location for .hyperexecute.yaml specified. Using: hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:39:13.222-0700","caller":"yamlconfigmanager/setup.go:75","msg":"using hyperexecute config from : hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:39:13.607-0700","caller":"yamlconfigmanager/setup.go:1717","msg":"Autodetecting test type in files of path : /Users/stuart/repo/wdio-example"}
+{"level":"debug","time":"2023-09-27T15:39:13.609-0700","caller":"yamlconfigmanager/setup.go:355","msg":"Tunnel: false"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:309","msg":"\n\u001b[4m\u001b[1m\u001b[97mExecution Plan\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:313","msg":"Mode:    \u001b[36mautosplit\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:361","msg":"Runson:    \u001b[36mlinux\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:365","msg":"Concurrency:    \u001b[36m2\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:416","msg":"Report:    \u001b[36mdisabled\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:433","msg":"Cache Directories:"}
+{"level":"info","time":"2023-09-27T15:39:13.609-0700","caller":"models/HypertestYamlConfig.go:435","msg":"    \u001b[36mnode_modules\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:13.610-0700","caller":"models/HypertestYamlConfig.go:456","msg":""}
+{"level":"debug","time":"2023-09-27T15:39:13.610-0700","caller":"filevalidator/setup.go:46","msg":"Warning: Checking data.json file in current directory, no dataJsonPath found in .hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:39:13.610-0700","caller":"filevalidator/setup.go:50","msg":"Warning: data.json file doesn't exist"}
+{"level":"debug","time":"2023-09-27T15:39:13.611-0700","caller":"snoopermanager/setup.go:135","msg":"Downloading test discovery dependency binary ..................."}
+{"level":"debug","time":"2023-09-27T15:39:13.611-0700","caller":"snoopermanager/setup.go:136","msg":"Download url: https://downloads.hyperexecute.cloud/hyperexecute/darwin/arm64/snooper"}
+{"level":"debug","time":"2023-09-27T15:39:14.451-0700","caller":"snoopermanager/setup.go:168","msg":"Downloading test discovery dependency binary"}
+{"level":"info","time":"2023-09-27T15:39:18.815-0700","caller":"snoopermanager/setup.go:181","msg":"\u001b[91m\u001b[32m✔\u001b[0m Test discovery dependency binary binary downloaded successfully\n\u001b[0m"}
+{"level":"debug","time":"2023-09-27T15:39:18.815-0700","caller":"testdiscoverer/discoverer.go:68","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper --featureFilePaths=Features/ --frameWork=java --specificTags=@ToDoOne"}
+{"level":"debug","time":"2023-09-27T15:39:18.815-0700","caller":"testdiscoverer/discoverer.go:72","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper  --targetOs=linux --featureFilePaths=Features/ --frameWork=java --specificTags=@ToDoOne"}
+{"level":"info","time":"2023-09-27T15:39:18.938-0700","caller":"testdiscoverer/discoverer.go:87","msg":"\u001b[4m\u001b[1m\u001b[97mTest Discovery Result: 0\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:39:18.938-0700","caller":"testdiscoverer/discoverer.go:88","msg":""}
+{"level":"error","time":"2023-09-27T15:39:18.938-0700","caller":"core/lifecycle.go:296","msg":"2023-09-27T15:39:11-07:00    error    \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery - Error doing test discovery."}
+{"level":"debug","time":"2023-09-27T15:39:18.938-0700","caller":"cmd/bin.go:295","msg":"Exiting application due to error \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery"}
+{"level":"debug","time":"2023-09-27T15:40:44.208-0700","caller":"cmd/bin.go:103","msg":"Upstream version: {Name: Min:0.2.113 Max:0.2.113} "}
+{"level":"debug","time":"2023-09-27T15:40:45.216-0700","caller":"core/lifecycle.go:101","msg":"Setting environment"}
+{"level":"debug","time":"2023-09-27T15:40:45.218-0700","caller":"core/lifecycle.go:104","msg":"Parsing config"}
+{"level":"debug","time":"2023-09-27T15:40:45.218-0700","caller":"yamlconfigmanager/setup.go:404","msg":"Custom location for .hyperexecute.yaml specified. Using: hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:45.218-0700","caller":"yamlconfigmanager/setup.go:75","msg":"using hyperexecute config from : hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:45.589-0700","caller":"yamlconfigmanager/setup.go:1717","msg":"Autodetecting test type in files of path : /Users/stuart/repo/wdio-example"}
+{"level":"debug","time":"2023-09-27T15:40:45.590-0700","caller":"yamlconfigmanager/setup.go:355","msg":"Tunnel: false"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:309","msg":"\n\u001b[4m\u001b[1m\u001b[97mExecution Plan\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:313","msg":"Mode:    \u001b[36mautosplit\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:361","msg":"Runson:    \u001b[36mlinux\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:365","msg":"Concurrency:    \u001b[36m2\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:416","msg":"Report:    \u001b[36mdisabled\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:433","msg":"Cache Directories:"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:435","msg":"    \u001b[36mnode_modules\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:45.590-0700","caller":"models/HypertestYamlConfig.go:456","msg":""}
+{"level":"debug","time":"2023-09-27T15:40:45.590-0700","caller":"filevalidator/setup.go:46","msg":"Warning: Checking data.json file in current directory, no dataJsonPath found in .hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:45.591-0700","caller":"filevalidator/setup.go:50","msg":"Warning: data.json file doesn't exist"}
+{"level":"debug","time":"2023-09-27T15:40:45.963-0700","caller":"snoopermanager/setup.go:195","msg":"upstream version: 1.20.1 "}
+{"level":"debug","time":"2023-09-27T15:40:46.130-0700","caller":"testdiscoverer/discoverer.go:68","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper --featureFilePaths=Features/ --frameWork=java --specificTags=@ToDoOne"}
+{"level":"debug","time":"2023-09-27T15:40:46.130-0700","caller":"testdiscoverer/discoverer.go:72","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper  --targetOs=linux --featureFilePaths=Features/ --frameWork=java --specificTags=@ToDoOne"}
+{"level":"info","time":"2023-09-27T15:40:46.256-0700","caller":"testdiscoverer/discoverer.go:87","msg":"\u001b[4m\u001b[1m\u001b[97mTest Discovery Result: 0\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:46.256-0700","caller":"testdiscoverer/discoverer.go:88","msg":""}
+{"level":"error","time":"2023-09-27T15:40:46.256-0700","caller":"core/lifecycle.go:296","msg":"2023-09-27T15:40:43-07:00    error    \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery - Error doing test discovery."}
+{"level":"debug","time":"2023-09-27T15:40:46.256-0700","caller":"cmd/bin.go:295","msg":"Exiting application due to error \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery"}
+{"level":"debug","time":"2023-09-27T15:40:54.924-0700","caller":"cmd/bin.go:103","msg":"Upstream version: {Name: Min:0.2.113 Max:0.2.113} "}
+{"level":"debug","time":"2023-09-27T15:40:55.933-0700","caller":"core/lifecycle.go:101","msg":"Setting environment"}
+{"level":"debug","time":"2023-09-27T15:40:55.935-0700","caller":"core/lifecycle.go:104","msg":"Parsing config"}
+{"level":"debug","time":"2023-09-27T15:40:55.935-0700","caller":"yamlconfigmanager/setup.go:404","msg":"Custom location for .hyperexecute.yaml specified. Using: hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:55.935-0700","caller":"yamlconfigmanager/setup.go:75","msg":"using hyperexecute config from : hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:56.334-0700","caller":"yamlconfigmanager/setup.go:1717","msg":"Autodetecting test type in files of path : /Users/stuart/repo/wdio-example"}
+{"level":"debug","time":"2023-09-27T15:40:56.334-0700","caller":"yamlconfigmanager/setup.go:355","msg":"Tunnel: false"}
+{"level":"info","time":"2023-09-27T15:40:56.334-0700","caller":"models/HypertestYamlConfig.go:309","msg":"\n\u001b[4m\u001b[1m\u001b[97mExecution Plan\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:313","msg":"Mode:    \u001b[36mautosplit\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:361","msg":"Runson:    \u001b[36mlinux\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:365","msg":"Concurrency:    \u001b[36m2\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:416","msg":"Report:    \u001b[36mdisabled\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:433","msg":"Cache Directories:"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:435","msg":"    \u001b[36mnode_modules\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:56.335-0700","caller":"models/HypertestYamlConfig.go:456","msg":""}
+{"level":"debug","time":"2023-09-27T15:40:56.335-0700","caller":"filevalidator/setup.go:46","msg":"Warning: Checking data.json file in current directory, no dataJsonPath found in .hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:40:56.335-0700","caller":"filevalidator/setup.go:50","msg":"Warning: data.json file doesn't exist"}
+{"level":"debug","time":"2023-09-27T15:40:56.748-0700","caller":"snoopermanager/setup.go:195","msg":"upstream version: 1.20.1 "}
+{"level":"debug","time":"2023-09-27T15:40:56.903-0700","caller":"testdiscoverer/discoverer.go:68","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper --specificTags=@ToDoOne --featureFilePaths=test/ --frameWork=java"}
+{"level":"debug","time":"2023-09-27T15:40:56.903-0700","caller":"testdiscoverer/discoverer.go:72","msg":"Test Discovery Command: /Users/stuart/repo/wdio-example/.hyperexecute/snooper  --targetOs=linux --specificTags=@ToDoOne --featureFilePaths=test/ --frameWork=java"}
+{"level":"info","time":"2023-09-27T15:40:57.029-0700","caller":"testdiscoverer/discoverer.go:87","msg":"\u001b[4m\u001b[1m\u001b[97mTest Discovery Result: 0\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:40:57.029-0700","caller":"testdiscoverer/discoverer.go:88","msg":""}
+{"level":"error","time":"2023-09-27T15:40:57.029-0700","caller":"core/lifecycle.go:296","msg":"2023-09-27T15:40:54-07:00    error    \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery - Error doing test discovery."}
+{"level":"debug","time":"2023-09-27T15:40:57.029-0700","caller":"cmd/bin.go:295","msg":"Exiting application due to error \u001b[91mERR_TEST_DSC\u001b[0m     Test Discovery Error: No tests found in test discovery"}
+{"level":"debug","time":"2023-09-27T15:42:00.703-0700","caller":"cmd/bin.go:103","msg":"Upstream version: {Name: Min:0.2.113 Max:0.2.113} "}
+{"level":"debug","time":"2023-09-27T15:42:01.748-0700","caller":"core/lifecycle.go:101","msg":"Setting environment"}
+{"level":"debug","time":"2023-09-27T15:42:01.749-0700","caller":"core/lifecycle.go:104","msg":"Parsing config"}
+{"level":"debug","time":"2023-09-27T15:42:01.749-0700","caller":"yamlconfigmanager/setup.go:404","msg":"Custom location for .hyperexecute.yaml specified. Using: hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:42:01.749-0700","caller":"yamlconfigmanager/setup.go:75","msg":"using hyperexecute config from : hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:42:02.186-0700","caller":"yamlconfigmanager/setup.go:1717","msg":"Autodetecting test type in files of path : /Users/stuart/repo/wdio-example"}
+{"level":"error","time":"2023-09-27T15:42:02.187-0700","caller":"core/lifecycle.go:109","msg":"2023-09-27T15:42:00-07:00    error    \u001b[91mERR::YML::VAL\u001b[0m     Invalid yaml content: snooper args are required under testDiscovery directive in auto split mode for Version: 0.1"}
+{"level":"debug","time":"2023-09-27T15:42:02.187-0700","caller":"cmd/bin.go:295","msg":"Exiting application due to error \u001b[91mERR::YML::VAL\u001b[0m     Invalid yaml content: snooper args are required under testDiscovery directive in auto split mode for Version: 0.1"}
+{"level":"debug","time":"2023-09-27T15:42:30.283-0700","caller":"cmd/bin.go:103","msg":"Upstream version: {Name: Min:0.2.113 Max:0.2.113} "}
+{"level":"debug","time":"2023-09-27T15:42:31.278-0700","caller":"core/lifecycle.go:101","msg":"Setting environment"}
+{"level":"debug","time":"2023-09-27T15:42:31.280-0700","caller":"core/lifecycle.go:104","msg":"Parsing config"}
+{"level":"debug","time":"2023-09-27T15:42:31.280-0700","caller":"yamlconfigmanager/setup.go:404","msg":"Custom location for .hyperexecute.yaml specified. Using: hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:42:31.280-0700","caller":"yamlconfigmanager/setup.go:75","msg":"using hyperexecute config from : hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:42:31.762-0700","caller":"yamlconfigmanager/setup.go:1717","msg":"Autodetecting test type in files of path : /Users/stuart/repo/wdio-example"}
+{"level":"debug","time":"2023-09-27T15:42:31.762-0700","caller":"yamlconfigmanager/setup.go:355","msg":"Tunnel: false"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:309","msg":"\n\u001b[4m\u001b[1m\u001b[97mExecution Plan\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:361","msg":"Runson:    \u001b[36mlinux\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:365","msg":"Concurrency:    \u001b[36m1\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:416","msg":"Report:    \u001b[36mdisabled\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:433","msg":"Cache Directories:"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:435","msg":"    \u001b[36mnode_modules\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:42:31.763-0700","caller":"models/HypertestYamlConfig.go:456","msg":""}
+{"level":"debug","time":"2023-09-27T15:42:31.763-0700","caller":"filevalidator/setup.go:46","msg":"Warning: Checking data.json file in current directory, no dataJsonPath found in .hyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:42:31.763-0700","caller":"filevalidator/setup.go:50","msg":"Warning: data.json file doesn't exist"}
+{"level":"info","time":"2023-09-27T15:42:32.411-0700","caller":"core/lifecycle.go:350","msg":"\u001b[102m\u001b[1m\u001b[30mYou've consumed 0.11 % of your limit. Free trial mins left - 299.68\u001b[0m\u001b[0m\u001b[0m"}
+{"level":"debug","time":"2023-09-27T15:42:32.412-0700","caller":"core/lifecycle.go:380","msg":"Job ID: 69536c3b-be56-4de8-bab6-361ca8dbbc89"}
+{"level":"debug","time":"2023-09-27T15:42:32.413-0700","caller":"archivemanager/setup.go:159","msg":"Creating archive of target directory: /Users/stuart/repo/wdio-example"}
+{"level":"debug","time":"2023-09-27T15:42:32.573-0700","caller":"storage/azure.go:55","msg":"Payload size: 1.96 kB, source path /var/folders/2f/zrl9gn6s1131235wcxl9665w0000gp/T/git.diff"}
+{"level":"debug","time":"2023-09-27T15:42:32.574-0700","caller":"utils/azcopy.go:143","msg":"Downloading dependency binary ..................."}
+{"level":"debug","time":"2023-09-27T15:42:32.884-0700","caller":"utils/azcopy.go:100","msg":"Downloading dependency to upload files"}
+{"level":"info","time":"2023-09-27T15:42:33.928-0700","caller":"utils/azcopy.go:118","msg":"\u001b[91m\u001b[32m✔\u001b[0m Dependency binary downloaded successfully\u001b[0m"}
+{"level":"debug","time":"2023-09-27T15:42:33.928-0700","caller":"utils/azcopy.go:190","msg":"returning from fallback"}
+{"level":"debug","time":"2023-09-27T15:42:45.077-0700","caller":"core/lifecycle.go:510","msg":"Zip file size: 108.06 MB"}
+{"level":"debug","time":"2023-09-27T15:42:45.077-0700","caller":"core/lifecycle.go:520","msg":"Archive location: /Users/stuart/repo/wdio-example/hyperexecute-code-69536c3b-be56-4de8-bab6-361ca8dbbc89.zip\n"}
+{"level":"debug","time":"2023-09-27T15:42:45.077-0700","caller":"storage/azure.go:55","msg":"Payload size: 108.06 MB, source path /Users/stuart/repo/wdio-example/hyperexecute-code-69536c3b-be56-4de8-bab6-361ca8dbbc89.zip"}
+{"level":"debug","time":"2023-09-27T15:43:17.241-0700","caller":"receptionmanager/setup.go:143","msg":"Uploading yaml : /Users/stuart/repo/wdio-example/.updatedhyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:43:17.242-0700","caller":"storage/azure.go:55","msg":"Payload size: 1.20 kB, source path /Users/stuart/repo/wdio-example/.updatedhyperexecute.yaml"}
+{"level":"debug","time":"2023-09-27T15:43:19.402-0700","caller":"core/lifecycle.go:548","msg":"Successfully deleted code archive: /Users/stuart/repo/wdio-example/hyperexecute-code-69536c3b-be56-4de8-bab6-361ca8dbbc89.zip\n"}
+{"level":"info","time":"2023-09-27T15:43:25.720-0700","caller":"jobmanager/setup.go:131","msg":"Job \u001b[1m\u001b[4m69536c3b-be56-4de8-bab6-361ca8dbbc89\u001b[0m\u001b[0m has \u001b[101m LAMBDA_ERROR \u001b[0m"}
+{"level":"info","time":"2023-09-27T15:43:25.721-0700","caller":"jobmanager/setup.go:367","msg":"Job Link: \u001b[4m\u001b[34mhttps://hyperexecute.lambdatest.com/hyperexecute/task?jobId=69536c3b-be56-4de8-bab6-361ca8dbbc89\u001b[0m\u001b[0m\n"}
+{"level":"debug","time":"2023-09-27T15:43:25.721-0700","caller":"jobmanager/setup.go:138","msg":"New Tasks generated"}
+{"level":"debug","time":"2023-09-27T15:43:25.721-0700","caller":"jobmanager/setup.go:149","msg":"Task id: fed36fb5-303d-4843-a9c9-68ef39971dc0"}
+{"level":"debug","time":"2023-09-27T15:43:25.721-0700","caller":"jobmanager/setup.go:152","msg":"Sending new task alert to stage manager for taskId: fed36fb5-303d-4843-a9c9-68ef39971dc0"}
+{"level":"error","time":"2023-09-27T15:43:25.732-0700","caller":"jobmanager/setup.go:175","msg":"2023-09-27T15:42:30-07:00    error    \u001b[91mERR::JOB::STS\u001b[0m     Job lambda_error!"}
+{"level":"debug","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/setup.go:204","msg":"\n\nJob status"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:37","msg":"\n\u001b[101m LAMBDA_ERROR \u001b[0m\n"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"core/lifecycle.go:635","msg":"taskID:fed36fb5-303d-4843-a9c9-68ef39971dc0 has errored with remark: error in extracting: reading file in zip archive: /home/ltuser/foreman/wdio-example/node_modules/.bin/browserslist: making symbolic link for: symlink #!/usr/bin/env node\n\nvar updateDb = require('update-browserslist-db')\nvar fs = require('fs')\n\nvar browserslist = require('./')\nvar pkg = require('./package.json')\n\nvar args = process.argv.slice(2)\n\nvar USAGE =\n  'Usage:\\n' +\n  '  npx browserslist\\n' +\n  '  npx browsersli\n"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mTest Execution Time\u001b[0m:                  \u001b[91m0s\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mJob Duration Time\u001b[0m:                    2s"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mTotal Tasks\u001b[0m:                          1"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mCumulative Time Consumed\u001b[0m:             2s"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mTotal Stages\u001b[0m:                         0"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mPass discovery stage percentage\u001b[0m:      0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mFailed discovery stage percentage\u001b[0m:    0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.733-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mPass pre stage percentage\u001b[0m:            0.00%"}
+{"level":"debug","time":"2023-09-27T15:43:25.733-0700","caller":"core/lifecycle.go:712","msg":"Context canceled"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mFailed pre stage percentage\u001b[0m:          0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mPass test stage percentage\u001b[0m:           0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"core/lifecycle.go:715","msg":"\u001b[2mStopping pipeline gracefully\u001b[0m"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mFailed test stage percentage\u001b[0m:         0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mPass post stage percentage\u001b[0m:           0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mFailed post stage percentage\u001b[0m:         0.00%"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:96","msg":"    \u001b[1mFailed Tasks\u001b[0m:                         0"}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/JobSummaryManager.go:41","msg":""}
+{"level":"debug","time":"2023-09-27T15:43:25.734-0700","caller":"core/lifecycle.go:718","msg":"Quit requested from main goroutine...."}
+{"level":"debug","time":"2023-09-27T15:43:25.734-0700","caller":"core/lifecycle.go:719","msg":"Waiting for the goroutines to exit"}
+{"level":"debug","time":"2023-09-27T15:43:25.734-0700","caller":"core/lifecycle.go:721","msg":"All goroutines exited"}
+{"level":"error","time":"2023-09-27T15:43:25.734-0700","caller":"core/lifecycle.go:723","msg":"2023-09-27T15:42:30-07:00    error    Exiting with error: Lambda error found."}
+{"level":"info","time":"2023-09-27T15:43:25.734-0700","caller":"jobmanager/setup.go:367","msg":"Job Link: \u001b[4m\u001b[34mhttps://hyperexecute.lambdatest.com/hyperexecute/task?jobId=69536c3b-be56-4de8-bab6-361ca8dbbc89\u001b[0m\u001b[0m\n"}
+{"level":"debug","time":"2023-09-27T15:43:25.734-0700","caller":"cmd/bin.go:295","msg":"Exiting application due to error Lambda error found."}
