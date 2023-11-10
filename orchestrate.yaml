@@ -1,0 +1,20 @@
+apiVersion: v1alpha
+kind: imagerunner
+sauce:
+  region: us-west-1
+suites:
+- name: Testing Mock Server Use Case
+  workload: webdriver
+  #resourceProfile: c6m6
+  image: sminch/mockjs:0.0.1
+  # the command to run your tests
+  entrypoint: "npx wdio run wdio.conf.js"
+  artifacts:
+    - "/workdir/file.log"
+
+artifacts:
+  download:
+    when: always
+    match:
+      - "*"
+    directory: ./artifacts

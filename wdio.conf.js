@@ -13,13 +13,13 @@ exports.config = {
   maxInstancesPerCapability: 50,
   capabilities: [{
     platformName: 'Android',
+    browserName: 'chrome',
     'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
     'appium:platformVersion': '12.0',
     'appium:deviceOrientation': 'portrait',
-    'appium:app': 'storage:filename=home-depot-app.apk',
     'appium:automationName': 'UIAutomator2',
     'sauce:options': {
-      build: '2023-09-26 - Android WebViews',
+      build: 'Node Mock Server',
       appiumVersion: '2.0.0'
     },
   },
