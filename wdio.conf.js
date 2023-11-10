@@ -12,14 +12,14 @@ exports.config = {
   maxInstances: 50,
   maxInstancesPerCapability: 50,
   capabilities: [{
-    platformName: 'Android',
-    browserName: 'chrome',
-    'appium:deviceName': 'Google Pixel 6 GoogleAPI Emulator',
-    'appium:platformVersion': '12.0',
+    platformName: 'iOS',
+    'appium:deviceName': 'iPhone 15 Simulator',
+    'appium:app': 'storage:filename=Retail_release-4.470-20231102_16_40613_automation-chase.app.zip',
+    'appium:platformVersion': '17.0',
     'appium:deviceOrientation': 'portrait',
-    'appium:automationName': 'UIAutomator2',
+    'appium:automationName': 'XCUITest',
     'sauce:options': {
-      build: 'Node Mock Server',
+      build: 'iOS 17 Start Times',
       appiumVersion: '2.0.0'
     },
   },
