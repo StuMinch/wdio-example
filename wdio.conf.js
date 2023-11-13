@@ -1,25 +1,25 @@
 exports.config = {
-  deprecationWarnings: false,
-  framework: 'mocha',
-    mochaOpts: {
-        timeout: 40000
-    },
   user: process.env.SAUCE_USERNAME,
   key: process.env.SAUCE_ACCESS_KEY,
   logLevel: 'debug',
   logOutput: '/Users/stuart/Developer/WebdriverIO/wdio-example/webdriver.log',
-  services: ['sauce', 'intercept'],
-  maxInstances: 50,
-  maxInstancesPerCapability: 50,
+  services: ['sauce'],
+  maxInstances: 100,
+  maxInstancesPerCapability: 100,
   capabilities: [{
-    platformName: 'iOS',
-    'appium:deviceName': 'iPhone 15 Simulator',
-    'appium:app': 'storage:filename=Retail_release-4.470-20231102_16_40613_automation-chase.app.zip',
-    'appium:platformVersion': '17.0',
-    'appium:deviceOrientation': 'portrait',
-    'appium:automationName': 'XCUITest',
+    platformName: 'Android',
+    'appium:deviceName': 'Android GoogleAPI Emulator',
+    'appium:platformVersion': '12.0',
+    'appium:automationName': 'UIAutomator2',
+    'appium:app': 'storage:filename=cart-release_v23.104.302-20001_arm64-v8a.apk',
     'sauce:options': {
-      build: 'iOS 17 Start Times',
+      prerun: {
+        'executable': 'storage:filename=adb-prerun.sh',
+        'background': true,
+        'timeout': 120
+      },
+      build: 'Android Emulator PreRun Test',
+      name: 'Android Test',
       appiumVersion: '2.0.0'
     },
   },

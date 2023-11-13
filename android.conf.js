@@ -13,9 +13,9 @@ exports.config = {
       'appium:platformVersion': '12.0',
       'appium:automationName': 'UIAutomator2',
       'sauce:options': {
-        build: 'WDIO Cronjob - June 23rd',
+        build: 'Android Emulator',
         name: 'Android Test',
-        appiumVersion: '2.0.0-beta66'
+        appiumVersion: '2.0.0'
       },
     },
     ],
