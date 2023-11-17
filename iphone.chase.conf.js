@@ -20,7 +20,7 @@ exports.config = {
       'appium:automationName': 'XCUITest',
       'sauce:options': {
         build: 'iOS 17 Start Times',
-        tunnelName: 'test-tunnel-pool-config',
+        tunnelName: 'graceful-shutdown',
         appiumVersion: '2.0.0'
       },
     },
