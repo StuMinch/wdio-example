@@ -6,6 +6,10 @@ exports.config = {
     services: ['sauce'],
     maxInstances: 100,
     maxInstancesPerCapability: 100,
+    framework: 'mocha',
+    mochaOpts: {
+        timeout: 40000
+    },
     capabilities: [{
       platformName: 'Android',
       'appium:deviceName': 'Android GoogleAPI Emulator',
