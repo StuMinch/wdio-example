@@ -10,7 +10,6 @@ exports.config = {
       platformName: 'Android',
       'appium:deviceName': 'Android GoogleAPI Emulator',
       'appium:platformVersion': '14.0',
-      'appium:orientation': 'LANDSCAPE',
       'appium:automationName': 'UIAutomator2',
       'appium:app': 'storage:filename=home-depot-app.apk',
       'sauce:options': {
