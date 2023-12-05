@@ -1,4 +1,6 @@
 exports.config = {
+    user: secrets.SAUCE_USERNAME,
+    key: secrets.SAUCE_ACCESS_KEY,
     logLevel: 'debug',
     logOutput: '/Users/stuart/Developer/WebdriverIO/wdio-example/webdriver.log',
     services: ['sauce'],
