@@ -12,11 +12,10 @@ exports.config = {
       'appium:platformVersion': '10.0',
       'appium:orientation': 'LANDSCAPE',
       'appium:automationName': 'UIAutomator2',
-      'appium:app': 'storage:filename=you-app.apk',
+      'appium:app': 'storage:filename=home-depot.apk',
       'sauce:options': {
-        prerun: 'storage:filename=adb-prerun.sh',
-        build: 'Android Emulator PreRun Test',
-        name: 'Android Test',
+        build: 'GitHub Actions',
+        name: 'Guest Checkout',
         appiumVersion: '2.0.0'
       },
     },
