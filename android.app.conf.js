@@ -12,7 +12,7 @@ exports.config = {
       'appium:platformVersion': '10.0',
       'appium:orientation': 'LANDSCAPE',
       'appium:automationName': 'UIAutomator2',
-      'appium:app': 'storage:filename=cart-release_v23.104.301-20001_x86.apk',
+      'appium:app': 'storage:filename=you-app.apk',
       'sauce:options': {
         prerun: 'storage:filename=adb-prerun.sh',
         build: 'Android Emulator PreRun Test',
