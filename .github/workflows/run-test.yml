@@ -25,8 +25,7 @@ jobs:
 
       - name: Run Sauce Labs tests
         run: npx wdio run android.app.conf.js
-
         env:
-          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
           SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
 
