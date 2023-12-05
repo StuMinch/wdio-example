@@ -12,7 +12,7 @@ exports.config = {
       'appium:platformVersion': '10.0',
       'appium:orientation': 'LANDSCAPE',
       'appium:automationName': 'UIAutomator2',
-      'appium:app': 'storage:filename=home-depot.apk',
+      'appium:app': 'storage:filename=home-depot-app.apk',
       'sauce:options': {
         build: 'GitHub Actions',
         name: 'Guest Checkout',
