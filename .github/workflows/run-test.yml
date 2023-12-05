@@ -24,6 +24,5 @@ jobs:
         run: npm install
 
       - name: Run Sauce Labs tests
-        env:
         run: npx wdio run android.app.conf.js
 
