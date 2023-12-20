@@ -1,3 +1,5 @@
+const date = new Date();
+
 exports.config = {
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
@@ -12,12 +14,12 @@ exports.config = {
       platformName: 'macOS 13',
       browserVersion: '16',
       'sauce:options': {
-        build: 'Troubleshooting macOS 13 Safari Desktop',
+        build: `macOS 13 Testing - ${date}`,
         commandTimeout: 480,
         idleTimeout: 600,
         maxDuration: 1800,
         recordScreenshots: false,
-        extendedDebugging: false,
+        extendedDebugging: true,
         timezone: "",
         screenResolution: "1600x1200",
         appiumVersion: "",

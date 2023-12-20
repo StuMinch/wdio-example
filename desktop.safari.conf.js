@@ -1,3 +1,5 @@
+const date = new Date();
+
 exports.config = {
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
@@ -12,7 +14,8 @@ exports.config = {
       platformName: 'macOS 13',
       browserVersion: '16',
       'sauce:options': {
-        build: 'macOS 13 Testing'
+        build: `macOS 13 Testing - Cronjob ${date}`,
+        commandTimeout: 480
       },
     }],
     specs: [
