@@ -35,7 +35,8 @@ describe('VMD-673', () => {
 
 
     it('should return elements inside a shadowRoot', async () => {
-        const innerEl = await $('#cells-template-welcomeExperience[state=\"active\"]').shadow$$("#innerEl");
+        const welcomeExperience = await $('#cells-template-welcomeExperience[state=\"active\"]').shadow$$("#welcomeExperience");
+        await welcomeExperience.waitForDisplayed({ timeout: 30000 });
     });
 
 })
