@@ -4,8 +4,8 @@ exports.config = {
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
     services: ['sauce'],
-    maxInstances: 100,
-    maxInstancesPerCapability: 100,
+    maxInstances: 15,
+    maxInstancesPerCapability: 15,
     mochaOpts: {
         timeout: 40000
     },
@@ -14,7 +14,7 @@ exports.config = {
       platformName: 'macOS 13',
       browserVersion: '16',
       'sauce:options': {
-        build: `macOS 13 Testing - ${date}`,
+        build: `Fixed capacity - 15 CCY`,
         commandTimeout: 480,
         idleTimeout: 600,
         maxDuration: 1800,

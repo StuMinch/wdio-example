@@ -14,7 +14,7 @@ exports.config = {
       platformName: 'macOS 13',
       browserVersion: '16',
       'sauce:options': {
-        build: `macOS 13 Testing - Cronjob ${date}`,
+        build: `macOS 13 Testing - ${date}`,
         commandTimeout: 480
       },
     }],
