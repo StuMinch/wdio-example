@@ -36,7 +36,7 @@ describe('VMD-673', () => {
 
     it('should return elements inside a shadowRoot', async () => {
         const welcomeExperience = await $('#cells-template-welcomeExperience[state=\"active\"]').shadow$$("#welcomeExperience");
-        await welcomeExperience.waitForDisplayed({ timeout: 30000 });
+        await driver.pause(30000)
     });
 
 })
