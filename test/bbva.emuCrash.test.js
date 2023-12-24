@@ -35,7 +35,7 @@ describe('VMD-673', () => {
 
 
     it('should return elements inside a shadowRoot', async () => {
-        const innerEl = await $('#cells-template-welcomeExperience[state=\"active\"]').shadow$$("innerEl");
+        const innerEl = await $('#cells-template-welcomeExperience[state=\"active\"]').shadow$$("#innerEl");
         console.log(await innerEl.getValue()); 
     });
 
