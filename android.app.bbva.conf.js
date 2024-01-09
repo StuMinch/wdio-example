@@ -13,7 +13,8 @@ exports.config = {
     capabilities: [{
       platformName: 'Android',
       'appium:deviceName': 'Android GoogleAPI Emulator',
-      'appium:platformVersion': '14.0',
+      //'appium:deviceName': 'Google_Pixel_5_sltech_us',
+      'appium:platformVersion': '12.0',
       'appium:automationName': 'UIAutomator2',
       'appium:app': 'storage:filename=glomo-co-dev-signed.apk',
       'sauce:options': {
