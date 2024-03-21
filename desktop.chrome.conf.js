@@ -4,16 +4,16 @@ exports.config = {
     services: ['sauce'],
     maxInstances: 100,
     capabilities: [{
-      browserName: 'MicrosoftEdge',
-      platformName: 'Windows 11',
+      browserName: 'Chrome',
+      platformName: 'Windows 10',
       browserVersion: 'latest',
       'sauce:options': {
-        build: 'Windows 11 Testing - Latest',
+        build: 'Solera',
         extendedDebugging: true
       },
     }],
     specs: [
-      './test/**/*.js'
+      './test/**/solera.spec.js'
     ]
   };
   

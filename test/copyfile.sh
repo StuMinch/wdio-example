@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the source file name
-src_file="testingTheInternet.js"
+src_file="cjpage.ios.test.js"
 
 # Loop and copy the file, appending a unique number to the file name
 for i in {1..99}; do
