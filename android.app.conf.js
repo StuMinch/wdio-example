@@ -12,12 +12,13 @@ exports.config = {
     },
     capabilities: [{
       platformName: 'Android',
-      'appium:deviceName': 'Samsung_Galaxy_S21_13_real_us',
+      'appium:deviceName': 'Android GoogleAPI Emulator',
       'appium:automationName': 'UIAutomator2',
-      'appium:app': 'storage:36223bbd-c738-400e-81c2-8dcd40e1ff9e',
+      'appium:platformVersion': '14.0',
+      'appium:app': 'storage:8ce2dc27-9586-49d4-a39f-287bb9a99a23',
       'sauce:options': {
-        build: 'Macrobenchmark Performance Testing',
-        name: 'ListView',
+        build: 'Home Depot',
+        name: 'Guest Checkout',
         appiumVersion: '2.0.0'
       },
     },
