@@ -1,0 +1,31 @@
+name: Run Sauce Labs Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-wdio-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+
+      - name: Install webdriverio
+        run: npm install -g webdriverio
+
+      - name: Install deps
+        run: npm install
+
+      - name: Run Sauce Labs tests
+        env:
+          SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+        run: npx wdio bestbuy.parallel.rdc.conf.js
+

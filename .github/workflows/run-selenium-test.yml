@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  run-tests:
+  run-selenium-test:
     runs-on: ubuntu-latest
 
     steps:
