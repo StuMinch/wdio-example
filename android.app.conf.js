@@ -19,7 +19,8 @@ exports.config = {
       'sauce:options': {
         build: 'Home Depot',
         name: 'Guest Checkout',
-        appiumVersion: '2.0.0'
+        appiumVersion: '2.0.0',
+        cacheId: 'gco-1'
       },
     },
     ],

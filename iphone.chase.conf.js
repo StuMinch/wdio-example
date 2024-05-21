@@ -14,10 +14,19 @@ exports.config = {
     capabilities: [{
       platformName: 'iOS',
       'appium:deviceName': 'iPhone 14 Simulator',
-      'appium:app': 'storage:f2401caa-60c7-49fb-ae95-e47ea6854730',
+      'appium:app': 'storage:ed55f6bc-b951-4de7-9bf1-8845fe5a7303',
       'appium:platformVersion': '16.2',
       'appium:deviceOrientation': 'portrait',
       'appium:automationName': 'XCUITest',
+      "appium:processArguments": {
+        'args': [
+          'a',
+          'b'
+        ],
+        'env': {
+          'c':'d'
+        }
+      },
       'sauce:options': {
         build: 'Simple Chase app test',
         appiumVersion: '2.0.0'
