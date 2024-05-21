@@ -1,0 +1,30 @@
+name: Run Sauce Labs Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip3 install selenium requests
+
+      - name: Set up secrets
+        env:
+          SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+        run: echo 'Secret = ${{ secrets.SAUCE_ACCESS_KEY }}'
+
+      - name: Run Sauce Labs tests
+        run: python3 simple_chrome_test.py
+
