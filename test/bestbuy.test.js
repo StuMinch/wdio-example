@@ -7,7 +7,7 @@ describe('Transition to Home View', () => {
       signinBtn.click();
     });
 
-    it('should enter the username', async () => {
+    it('should enter the usernames', async () => {
       await driver.pause(5000);
       const usernameBtn = await $('//XCUIElementTypeTextField[@value="UserName"]');
       await usernameBtn.waitForDisplayed({ timeout: 10000 });
