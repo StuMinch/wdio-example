@@ -12,21 +12,19 @@ exports.config = {
     },
     capabilities: [{
       platformName: 'Android',
-      'appium:deviceName': 'Android GoogleAPI Emulator',
+      'appium:autoGrantPermissions': true,
+      'appium:deviceName': 'Google.*',
       'appium:automationName': 'UIAutomator2',
-      'appium:platformVersion': '14.0',
-      'appium:app': 'storage:c1d98123-a117-40a4-96d0-886ee5b4bb1c',
+      'appium:app': 'storage:filename=Retail_chaseUat_release-2024.07-Minor1_4.542_5358_g30e1b6b6cbe_4_arm64-v8a.apk',
       'sauce:options': {
-        build: 'Home Depot',
+        build: 'Android Gestures Testing',
         name: 'Guest Checkout',
-        appiumVersion: '2.0.0',
-        tunnelName: 'mac-os-tunnel',
-        cacheId: 'gco-1'
+        appiumVersion: 'appium2-20240801'
       },
     },
     ],
     specs: [
-      './test/**/guestCheckout.test.1.js'
+      './test/**/longpress.android.test.js'
     ]
   };
   

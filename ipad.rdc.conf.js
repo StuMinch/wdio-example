@@ -13,17 +13,28 @@ exports.config = {
   capabilities: [{
     platformName: 'iOS',
     browserName: 'Safari',
-    'appium:deviceName': 'iPhone.*',
-    'appium:platformVersion': '16',
+    'appium:deviceName': 'iPad Air 2022 5th Gen',
     'appium:automationName': 'XCUITest',
     'appium:deviceOrientation': 'portrait',
+    'appium:autoAcceptAlerts': 'true',
     'sauce:options': {
-      //appiumVersion: 'latest',
-      //tunnelName: 'docker-compose-tunnel',
-      build: 'Do not specify Appium version'
+      appiumVersion: 'latest',
+      build: 'Alaska Airlines'
       },
+    },
+    {
+    platformName: 'iOS',
+    browserName: 'Safari',
+    'appium:deviceName': 'iPad Air 2022 5th Gen',
+    'appium:automationName': 'XCUITest',
+    'appium:deviceOrientation': 'portrait',
+    'appium:autoAcceptAlerts': 'true',
+    'sauce:options': {
+      appiumVersion: 'latest',
+      build: 'Alaska Airlines'
+    },
   },],
   specs: [
-    './test/**/winnie.rdc.web.spec.js'
+    './test/**/alaska.rdc.web.spec.js'
   ]
 };
