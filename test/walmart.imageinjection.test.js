@@ -151,12 +151,25 @@ describe('Scan Multiple Images', () => {
         const invBtn = await $("//android.widget.TextView[@text='Inventory']");
         await invBtn.waitForDisplayed({ timeout: 10000 });
         await invBtn.click();
-        const aisleBtn = await $("//android.view.ViewGroup[@content-desc='aisleLocListItem']");
+        const aisleBtn = await $("//android.widget.Button[@content-desc='Aisle locations']");
         await aisleBtn.waitForDisplayed({ timeout: 10000 });
         await aisleBtn.click();
         const barcodeBtn = await $("//android.widget.ImageView[@content-desc='barcode-icon']");
         await barcodeBtn.waitForDisplayed({ timeout: 10000 });
         await barcodeBtn.click();
+        const whileUsingBtn = await $("//android.widget.Button[@text='While using the app']");
+        await whileUsingBtn.waitForDisplayed({ timeout: 10000 });
+        await whileUsingBtn.click();
+    });
+
+    it('should inject image', async () => {
+        const { readFileSync } = require('fs')
+        const { join } = require('path')
+        // Read the file from your project and transform it to a base64 string
+        const qrCodeImage = readFileSync(
+            join(process.cwd(), 'assets/qr-code.png'), 'base64')
+        // Provide the transformed image to the device
+        driver.execute(`sauce:inject-image=${qrCodeImage}`)
     });
 
 });
