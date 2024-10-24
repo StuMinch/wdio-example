@@ -12,7 +12,7 @@ exports.config = {
       },
     capabilities: [{
       platformName: 'Android',
-      'appium:deviceName': 'Google.*',
+      'appium:deviceName': 'Google.*||Samsung.*',
       'appium:automationName': 'UIAutomator2',
       'appium:deviceOrientation': 'portrait',
       'appium:app': 'storage:d92ba154-1e5e-4901-bca2-59fe2f75adea',

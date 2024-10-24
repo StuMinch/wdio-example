@@ -42,13 +42,7 @@ describe('Scan Multiple Images', () => {
         await securityCode.setValue('672870');
         await driver.execute('mobile: performEditorAction', {'action': 'done'});
     });
-/*
-    it('should tap the submit button', async () => {
-        const submitBtn = await $('#submit');
-        await submitBtn.waitForDisplayed({ timeout: 10000 });
-        await submitBtn.click();
-    });
-*/
+
     it('should enter the password', async () => {
         const password = await $('#password');
         await password.waitForDisplayed({ timeout: 10000 });
@@ -144,13 +138,16 @@ describe('Scan Multiple Images', () => {
         await okayBtn.click();
     });
 
-    it('should navigate to barcode scanner', async () => {
+    it('should navigate to inventory', async () => {
         const menuIcon = await $("//android.widget.ImageView[@resource-id='MenuIcon']");
         await menuIcon.waitForDisplayed({ timeout: 10000 });
         await menuIcon.click();
         const invBtn = await $("//android.widget.TextView[@text='Inventory']");
         await invBtn.waitForDisplayed({ timeout: 10000 });
         await invBtn.click();
+    });
+/*
+    it('should navigate to scanner', async () => {
         const aisleBtn = await $("//android.widget.Button[@content-desc='Aisle locations']");
         await aisleBtn.waitForDisplayed({ timeout: 10000 });
         await aisleBtn.click();
@@ -161,16 +158,39 @@ describe('Scan Multiple Images', () => {
         await whileUsingBtn.waitForDisplayed({ timeout: 10000 });
         await whileUsingBtn.click();
     });
-
-    it('should inject image', async () => {
-        const { readFileSync } = require('fs')
-        const { join } = require('path')
-        // Read the file from your project and transform it to a base64 string
-        const qrCodeImage = readFileSync(
-            join(process.cwd(), 'assets/qr-code.png'), 'base64')
-        // Provide the transformed image to the device
-        driver.execute(`sauce:inject-image=${qrCodeImage}`)
+*/   
+    it('should tap modulars', async () => {
+        const modBtn = await $("//android.widget.TextView[@text='Modulars']");
+        await modBtn.waitForDisplayed({ timeout: 10000 });
+        await modBtn.click();
+        await driver.pause(1000);
     });
 
+    it('should tap current modulars', async () => {
+        const modBtn = await $("~current-modulars");
+        await modBtn.waitForDisplayed({ timeout: 10000 });
+        await modBtn.click();
+        await driver.pause(1000);
+    });
+
+    it('should tap household paper goods', async () => {
+        const modBtn = await $("//android.widget.Button[contains(@content-desc,'listItem 4')]/android.widget.TextView[1]");
+        await modBtn.waitForDisplayed({ timeout: 10000 });
+        await modBtn.click();
+        await driver.pause(5000);
+    });
+/*
+    it('should inject image', async () => {
+        await driver.pause(5000);
+        const { readFileSync } = require('fs');
+        const { join } = require('path');
+        // Read the file from your project and transform it to a base64 string
+        const qrCodeImage = readFileSync(
+            join(process.cwd(), 'assets/shelfLabel.jpg'), 'base64');
+        // Provide the transformed image to the device
+        driver.execute(`sauce:inject-image=${qrCodeImage}`);
+        await driver.pause(5000);
+    });
+*/
 });
    
